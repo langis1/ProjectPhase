@@ -1,6 +1,6 @@
 export class Weather {
     id:number;
-    city:string;
-    state:string;
-    temperature:number;
+    name:string;
+    country:string;
+    temp:number;
 }

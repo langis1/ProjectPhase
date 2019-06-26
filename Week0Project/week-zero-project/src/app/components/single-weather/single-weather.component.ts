@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Weather } from 'src/app/models/weather';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-single-weather',
@@ -9,11 +10,8 @@ import { Weather } from 'src/app/models/weather';
 export class SingleWeatherComponent implements OnInit {
 @Input() weather: Weather;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-  }
-
-
-
+    }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SingleWeatherComponent } from '../single-weather/single-weather.component';
 import { Weather } from 'src/app/models/weather';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,26 +10,23 @@ import { Weather } from 'src/app/models/weather';
 })
 export class DashboardComponent implements OnInit {
   weathers: Weather[];
+  
 
-  constructor() { }
-
-  ngOnInit() {
-    this.weathers = [
-      {id: 1,
-      city: 'wherever1',
-      state: 'whereverState1',
-      temperature: 1},
-      
-      {id: 2,
-      city: "wherever2",
-      state: "whereverState2",
-      temperature: 2},
-
-      {id: 3,
-      city: "wherever3",
-      state: "whereverState3",
-      temperature: 3}
-    ]
+  constructor(private apiService: ApiService) {  
+  //   this.weathers = [{
+  //     id:2,
+  //     name:"ahij",
+  //     country:"uhjk",
+  //     temp:3
+  //   },
+  // {id:3,
+  //   name:"ahij",
+  //   country:"uhjk",
+  //   temp:4}]
+   
   }
-
+  ngOnInit() {
+    this.apiService.getWeather().subscribe(weathers => 
+      this.weathers = weathers);
+    }
 }
