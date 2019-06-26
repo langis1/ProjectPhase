@@ -11,8 +11,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(): Observable<Weather[]> {
-    return this.http.get<Weather[]>(this.weathersUrl);
+  getWeather(): Observable<any> {
+    return this.http.get<any>(this.weathersUrl);
   }
 
 //  async getWeather(){const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Prague,cz&APPID=50052f3a89d319788df549fe8d835d8d');

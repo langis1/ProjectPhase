@@ -9,8 +9,12 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  weathers: Weather[];
-  
+  weathers:  any[]; //Weather[];
+
+
+  log(val) {
+    console.log(val);
+  }
 
   constructor(private apiService: ApiService) {  
   //   this.weathers = [{
@@ -23,6 +27,7 @@ export class DashboardComponent implements OnInit {
   //   name:"ahij",
   //   country:"uhjk",
   //   temp:4}]
+  
    
   }
   ngOnInit() {

@@ -1,3 +1,4 @@
-<!--A{{weathers | json}}B
+<!--{{log(weathers.list)}}B
 CCCCCCCCCCCCC  CCCCCCCCCCCCC-->
-<app-single-weather *ngFor="let weather of weathers" [weather] = "weather"></app-single-weather>
+<app-single-weather *ngFor="let weather of weathers.list" [weather] = "weather">
+</app-single-weather>

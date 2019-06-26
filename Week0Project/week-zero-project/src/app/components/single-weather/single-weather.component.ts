@@ -8,7 +8,8 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./single-weather.component.css']
 })
 export class SingleWeatherComponent implements OnInit {
-@Input() weather: Weather;
+@Input() weather: any;
+//weather: Weather;
 
   constructor(private apiService: ApiService) { }
 
