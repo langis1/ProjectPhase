@@ -9,13 +9,15 @@ import { SingleWeatherComponent } from './components/single-weather/single-weath
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DateComponent } from './components/date/date.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     SingleWeatherComponent,
-    DateComponent
+    DateComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
