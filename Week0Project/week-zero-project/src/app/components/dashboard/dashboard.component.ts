@@ -9,12 +9,12 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  weathers:  any[]; //Weather[];
+  weathers:  Weather[]; //any[]; //Weather[];
 
 
-  log(val) {
-    console.log(val);
-  }
+  //log(val) {
+  //  console.log(val);
+  //}
 
   constructor(private apiService: ApiService) {  
   //   this.weathers = [{
@@ -27,11 +27,17 @@ export class DashboardComponent implements OnInit {
   //   name:"ahij",
   //   country:"uhjk",
   //   temp:4}]
-  
    
   }
   ngOnInit() {
-    this.apiService.getWeather().subscribe(weathers => 
-      this.weathers = weathers);
-    }
+  //  this.loadWeather();
+
+    // OR
+     this.apiService.getWeather().subscribe(weathers => 
+       this.weathers = weathers
+     );
+  }
+ // async loadWeather() {
+ //   this.weathers = await this.apiService.getWeatherForCities([1,2,3]);
+ // }
 }

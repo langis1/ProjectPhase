@@ -1,6 +1,9 @@
 <div>
   <span class="city">{{weather.name}}</span>
-  <span class="state">{{weather.country}}</span>
+  <span class="state">{{weather.sys.country}}</span>
   <span class="temperature">{{weather.main.temp}} °C</span>
-  <span><img src="assets/img/rainy.png" alt="rainy"></span>
+  <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="weather icon">
 </div>
+
+
+
