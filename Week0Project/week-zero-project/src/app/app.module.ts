@@ -10,6 +10,8 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DateComponent } from './components/date/date.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { DetailWeatherComponent } from './components/detail-weather/detail-weather.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     DashboardComponent,
     SingleWeatherComponent,
     DateComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DetailWeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<p>
+  detail-weather works!
+</p>
+<div>
+    <span class="city">{{weather.name}}</span>
+    <span class="state">{{weather.sys.country}}</span>
+    <span class="temperature">{{weather.main.temp}} °C</span>
+    <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="weather icon">
+  </div>

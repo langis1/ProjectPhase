@@ -17,27 +17,21 @@ export class DashboardComponent implements OnInit {
   //}
 
   constructor(private apiService: ApiService) {  
-  //   this.weathers = [{
-  //     id:2,
-  //     name:"ahij",
-  //     country:"uhjk",
-  //     temp:3
-  //   },
-  // {id:3,
-  //   name:"ahij",
-  //   country:"uhjk",
-  //   temp:4}]
    
   }
+
+  getCitiesInList(): void {
+    this.apiService.getWeather().subscribe(weathers => 
+      this.weathers = weathers
+    );
+  }
+
   ngOnInit() {
   //  this.loadWeather();
-
-    // OR
-     this.apiService.getWeather().subscribe(weathers => 
-       this.weathers = weathers
-     );
+this.getCitiesInList();
+    }
   }
  // async loadWeather() {
  //   this.weathers = await this.apiService.getWeatherForCities([1,2,3]);
  // }
-}
+

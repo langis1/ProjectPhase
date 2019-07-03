@@ -1,4 +1,7 @@
 <!--{{log(weathers.list)}}B
 CCCCCCCCCCCCC  CCCCCCCCCCCCC-->
 <!--<div>{{weathers | json}}</div>-->
+<app-search-bar></app-search-bar>
+<h1>Weather</h1>
 <app-single-weather *ngFor="let weather of weathers" [weather] = "weather"></app-single-weather>
+

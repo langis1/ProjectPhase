@@ -1,0 +1,15 @@
+input {
+    float: right;
+    position: relative;
+}
+
+label {
+    float: right;
+    position: absolute;
+    right: 250px;
+}
+
+button {
+    float: right;
+    position: relative;
+}
